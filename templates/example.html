@@ -32,6 +32,14 @@
             <option value="{{colour}}">{{colour}}</option>
             {% endfor %}
         </select>
+        <br>
+        <select name="car" method="GET" action="/">
+            <option value="{{cars[0]}}" selected>{{cars[0]}}</option>
+            {% for car in cars[1:] %}
+            <option value="{{car}}">{{car}}</option>
+            {% endfor %}
+        </select>
+        <br>
             <button >
                 <p >Submit</p>            
             </button>

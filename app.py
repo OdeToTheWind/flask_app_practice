@@ -19,8 +19,9 @@ def sign():
 def home():
     links = ['https://www.youtube.com/', 'https://www.bing.com/', 'https://www.python.org/', 'https://www.english.com/']
     colours = ['Red', 'Blue', 'Black', 'Orange']
+    cars = ['car1', 'car2', 'car3', 'car4', 'car5', 'car6', 'car7']
 #    return render_template('example.html' )    # This is also working, without passing LINKS to that HTML file.
-    return render_template('example.html', links=links, colours=colours)
+    return render_template('example.html', links=links, colours=colours, cars=cars)
 
 @app.route("/process", methods=['POST'])
 def process():
@@ -31,10 +32,11 @@ def process():
     return render_template('index.html', name=name, comment=comment)
 
 @app.route("/dropdwn", methods=['POST'])
-def home():
+def dropdown():
     colour = request.form.get('colour')
-
-    return render_template('dropdown.html', colour=colour)
+    car = request.form.get('car')
+    
+    return render_template('dropdown.html', colour=colour, car=car)
 
 if __name__ == '__main__':
     app.run(debug=True)
