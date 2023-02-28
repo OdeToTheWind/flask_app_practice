@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Template</title>
+</head>
+<body>
+
+    {% if myvar %}
+    <h1>The variable I passed in is : {{ myvar }}</h1>
+    {% else %}
+    <h1>No Variable is Passed.</h1>
+    {% endif %}
+
+
+    <h1> This is the Example Template.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque velit, aliquid unde vel in aspernatur blanditiis rem consectetur officiis voluptatem eveniet quasi exercitationem sapiente qui repellat aperiam fugiat. Repellat voluptatem quas perferendis deserunt quibusdam neque beatae praesentium quasi quis ducimus.</p>
+    <a href="https://www.google.com/" target="_blank">This is the link to Google.</a>
+    
+    {% for link in links %}
+    <a href="{{ link }}" target="_blank">Here is a Link! </a>
+    {% endfor %}
+    
+
+    <form name="colour" method="post" action="/dropdwn">
+        
+        <select name="colour" method="GET" action="/">
+            <option value="{{colours[0]}}" selected>{{colours[0]}}</option>
+            {% for colour in colours[1:] %}
+            <option value="{{colour}}">{{colour}}</option>
+            {% endfor %}
+        </select>
+            <button >
+                <p >Submit</p>            
+            </button>
+    </form>
+      
+    
+    
+    <h1> This is the End of the Template.</h1>
+
+
+
+
+</body>
+</html>

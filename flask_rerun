@@ -1,0 +1,10 @@
+npx kill-port 5000
+
+pip install virtualenv
+
+virtual env
+
+source env/bin/activate
+
+flask run
+

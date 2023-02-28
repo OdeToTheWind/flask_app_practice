@@ -1,0 +1,4 @@
+npx kill-port 5000
+
+flask run
+
